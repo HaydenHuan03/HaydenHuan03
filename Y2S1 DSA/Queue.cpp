@@ -6,7 +6,7 @@ using namespace std;
 
 class Queue{
     int front, back;
-    char items;
+    char items[N];
 
     public:
     Queue(){
