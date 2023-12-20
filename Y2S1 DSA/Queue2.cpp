@@ -1,5 +1,5 @@
 #include <iostream>
-#define N 5
+#define N 4
 using namespace std;
 
 class Queue{
@@ -28,7 +28,7 @@ class Queue{
             cout << "Sorry, the queue is full\n";
         }
         else{
-            back = (back + 1)%N;
+            back = (back + 1) % N;
             items[back] = _item;
             count ++;
         }
@@ -57,13 +57,23 @@ class Queue{
         }
         else{
             cout << "[front = " << front << ", back = " << back << "]";
-            if(front <= back){
-                for(int i = front; i< back; i++){
-                cout << items[i];
-                cout << " ";
+            if(front > back){
+                for(int i = front; i < N; i++){
+                    cout << items[i] << " ";
                 }
-                cout << endl;
+
+                for(int i = 0; i <= back; i++){
+                    cout << items[i] << " ";
+                }
             }
+
+            else{
+                for(int i = front; i <= back; i++){
+                    cout << items[i] << " ";
+                }
+            }
+
+            cout << endl;
         }
     }
 };
@@ -84,6 +94,12 @@ int main(){
     q1.print();
 
     q1.enQueue(50);
+    q1.print();
+
+    q1.deQueue();
+    q1.print();
+
+    q1.deQueue();
     q1.print();
 
     return 0;
