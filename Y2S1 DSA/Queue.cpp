@@ -83,8 +83,6 @@ int main(){
     q1.deQueue();
     q1.print();
 
-    q1.
-
     system("pause");
     return 0;
 }
