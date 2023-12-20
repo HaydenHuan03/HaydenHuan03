@@ -29,7 +29,7 @@ class Queue{
             cout << "Sorry, the queue is full\n";
         }
         else
-        items[++ back] = _item;
+        items[++back] = _item;
         //back++; items[back] = _item;
     }
 
