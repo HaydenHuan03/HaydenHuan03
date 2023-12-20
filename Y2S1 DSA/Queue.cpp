@@ -55,7 +55,7 @@ class Queue{
         }
         else{
             for(int i = front; i< back; i++){
-                cout << "[front = " front << ", back = " << back << "]";
+                cout << "[front = " << front << ", back = " << back << "]";
                 cout << items[i];
                 cout << endl;
             }
