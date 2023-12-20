@@ -20,16 +20,18 @@ class Queue{
     }
 
     bool isFull(){
-        return count == N-1;
+        return count == N;
     }
 
-    void enQueue(char _item){
+    void enQueue(int _item){
         if(isFull()){
             cout << "Sorry, the queue is full\n";
         }
-        else
-        items[++back] = _item;
-        //back++; items[back] = _item;
+        else{
+            back = (back + 1)%N;
+            items[back] = _item;
+            count ++;
+        }
     }
 
     void deQueue(){
@@ -37,7 +39,8 @@ class Queue{
             cout << "Sorry, the queue is empty\n";
         }
         else{
-            front++;
+            front = (front + 1) % N;
+            count--;
         }
     }
     char getFront(){
@@ -53,9 +56,12 @@ class Queue{
             cout << "No item to be printed.";
         }
         else{
-            for(int i = front; i< back; i++){
-                cout << "[front = " << front << ", back = " << back << "]";
+            cout << "[front = " << front << ", back = " << back << "]";
+            if(front <= back){
+                for(int i = front; i< back; i++){
                 cout << items[i];
+                cout << " ";
+                }
                 cout << endl;
             }
         }
@@ -65,21 +71,19 @@ class Queue{
 int main(){
     Queue q1;
 
+    q1.enQueue(10);
     q1.print();
 
-    q1.enQueue('L');
+    q1.enQueue(20);
     q1.print();
 
-    q1.enQueue('D');
+    q1.enQueue(30);
     q1.print();
 
-    q1.deQueue();
+    q1.enQueue(40);
     q1.print();
 
-    q1.deQueue();
-    q1.print();
-
-    q1.deQueue();
+    q1.enQueue(50);
     q1.print();
 
     return 0;
