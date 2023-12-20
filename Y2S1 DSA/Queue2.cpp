@@ -1,27 +1,26 @@
-//Implement queue using Linear array
-#include<iostream>
-#define N 4
+#include <iostream>
+#define N 5
 using namespace std;
 
-
 class Queue{
-    int front, back;
-    char items[N];
+    int front, back, count;
+    int items[N];
 
     public:
     Queue(){
         front = 0;
-        back = -1;
+        count = 0;
+        back = N-1;
     }
 
     // destroyQueue()
 
     bool isEmpty(){
-        return (back < front);
+        return count == 0;
     }
 
     bool isFull(){
-        return back == (N-1);
+        return count == N-1;
     }
 
     void enQueue(char _item){
