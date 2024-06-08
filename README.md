@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Hayden Huan Kee Jiun</h1>
 <h3 align="center">A rookie from UTM Cybersecurity <3</h3>
 
-- 🌱 I’m currently learning **Cybersecurity and also Web Development**
+- 🌱 I’m currently learning **Cybersecurity and also Networking**
 
-- 💬 Ask me about **C++**
+- 💬 Ask me about ****
 
 - 📫 How to reach me **teomeehua@gmail.com**
 
